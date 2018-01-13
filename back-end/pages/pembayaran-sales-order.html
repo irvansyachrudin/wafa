@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>WAFA Admin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">WAFA</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-th-list fa-fw"></i> Data Master <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="data-barang.html"><i class="fa fa-table fa-fw"></i> Data Barang</a>
+                                </li>
+                                <li>
+									<a href="data-supplier.html"><i class="fa fa-table fa-fw"></i> Data Supplier</a>
+                                </li>
+								<li>
+									<a href="data-customer.html"><i class="fa fa-table fa-fw"></i> Data Customer</a>
+                                </li>
+								<li>
+									<a href="data-ekspedisi.html"><i class="fa fa-table fa-fw"></i> Data Ekspedisi</a>
+								</li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Pembelian (Purchase)<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="tables.html"><i class="fa fa-table fa-fw"></i> Stok</a>
+                                </li>
+                                <li>
+									<a href="purchase-order.html"><i class="fa fa-shopping-cart fa-fw"></i> Purchase Order</a>
+                                </li>
+								<li>
+									<a href="penerimaan-barang.html"><i class="fa fa-check-circle-o fa-fw"></i> Penerimaan Barang</a>
+                                </li>
+								<li>
+									<a href="pembayaran-po.html"><i class="fa fa-dollar fa-fw"></i> Pembayaran Purchase Order</a>
+								</li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Penjualan (Sales)<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="daftar_pembayaran.html"><i class="fa fa-table fa-fw"></i> Daftar Pembayaran</a>
+                                </li>
+                                <li>
+                                    <a href="penjualan.html"><i class="fa fa-shopping-cart fa-fw"></i> Permintaan Penjualan</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Laporan <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="laporan-stok.html"><i class="fa fa-table fa-fw"></i> Laporan Stok</a>
+                                </li>
+                                <li>
+									<a href="laporan-penjualan.html"><i class="fa fa-shopping-cart fa-fw"></i> Laporan Penjualan</a>
+                                </li>
+								<li>
+									<a href="laporan-pembelian.html"><i class="fa fa-shopping-cart fa-fw"></i> Laporan Pembelian</a>
+								</li>
+								<li>
+									<a href="laporan_perbarang.html"><i class="fa fa-briefcase fa-fw"></i> Laporan Per Barang</a>
+								</li>
+								<li>
+									<a href="laporan_customer.html"><i class="fa fa-users   fa-fw"></i> Laporan Customer</a>
+								</li>
+								<li>
+									<a href="laporan-hutang.html"><i class="fa fa-dollar fa-fw"></i> Laporan Piutang Penjualan</a>
+								</li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Pembayaran Sales Order</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Data Pembayaran Sales Order
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="card">
+                                <div class="card-header" data-background-color="purple">
+                                <table align="right" >
+                                    <tr>
+                                        <td width="70%" colspan="2"><button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-print " ></i> Tagihan</button>
+                                <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal3"><i class="fa fa-print" ></i> Surat Jalan</button> 
+                                <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal2">
+                                <i class="fa fa-file-text" ></i> Kwitansi</button> </td>
+                                        
+                                <td align="right" valign="middle" width="15%" ><p class="lead" style="font-size: 24px;"> Status : &nbsp</p></td><td valign="top"><select class="form-control">
+                                                <option>Belum Bayar</option>
+                                                <option>Katanya Sudah Bayar</option>
+                                                <option>Lunas</option>
+                                            </select></td>
+                                    </tr>
+                                </table>
+                                <br>
+                                
+                                            
+                                    <h2 class="title">Pembayaran Barang</h2>
+                                    <h4 class="title" align="right">WAFA</h4>
+                                    <p class="category" align="right">Jl. Pagesangan No.2 Sby<br>031-8432156</p>
+                                    <table border="0" width="100%">
+                                        <tr>
+                                            <td width="10%">Kepada</td>
+                                            <td>:</td>
+                                            <td>Irvan Syachrudin</td>
+                                            <td width="15%" style="border-right: 1px solid black">P 2017001</td>
+                                            <td width="15%" align="center">Total : 605.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top">Alamat</td>
+                                            <td valign="top">:</td>
+                                            <td>Jl Semut no.67<br> Surabaya</td>
+                                            <td valign="top">Tanggal</td>
+                                            <td align="center" valign="top">05 Januari 2018</td>
+                                        </tr>
+                                    </table><br>
+                                    <table class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Nama Barang</th>
+                                            <th>Jumlah</th>
+                                            <th>Harga Satuan</th>
+                                            <th>Total</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="odd gradeX">
+                                            <td>1</td>
+                                            <td>Buku Tilawah Wafa 1</td>
+                                            <td contenteditable >20</td>
+                                            <td class="center">9.000</td>
+                                            <td class="center">180.000</td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                            <td>2</td>
+                                            <td>Buku Peraga Tilawah Wafa 1</td>
+                                            <td>10</td>
+                                            <td class="center">17.000</td>
+                                            <td class="center">170.000</td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                            <td>2</td>
+                                            <td>Buku Menulis Wafa 1</td>
+                                            <td contenteditable >15</td>
+                                            <td class="center">17.000</td>
+                                            <td class="center">255.000</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table width="100%" class="table table-striped table-bordered table-hover" id="bayar">
+                                        <thead>
+                                            <tr>
+                                                <th>No. Bayar</th>
+                                                <th>Tgl Bayar</th>
+                                                <th>Metode</th>
+                                                <th>Jumlah</th>
+                                                <th width="40%">Ket</th>
+                                                <th width="10%">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="odd gradeX" id="data1">
+                                                <td>R 2017 0001</td>
+                                                <td>05 Januari 2018</td>
+                                                <td>Cash</td>
+                                                <td class="center">40.000</td>
+                                                <td contenteditable ></td>
+                                                <td><button type="button" class="btn btn-danger" onclick="$.fn.hapus(1);"><i class="fa fa-trash-o" ></i> Hapus</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="card-header" data-background-color="purple">
+                                        <table border="0" width="100%">
+                                            <tr>
+                                            <td width="15%" align="center" colspan="2"><h4 class="title" align="right" >Total : </h4></td>
+                                            <td><h4 class="title" align="right">605.000</h4></td>
+                                            </tr>
+                                            <tr>
+                                            <td width="15%" align="center" colspan="2"><h4 class="title" align="right" >Terbayar : </h4></td>
+                                            <td><h4 class="title" align="right">40.000</h4></td>
+                                            </tr>
+                                            <tr>
+                                            <td width="15%" align="center" colspan="2"><h4 class="title" align="right" >Sisa Bayar : </h4></td>
+                                            <td><h4 class="title" align="right">565.000</h4></td>
+                                            </tr>           
+                                            <tr>
+                                            <td width="41%"><h4 class="title"><button class="btn btn-primary btn-lg" id="tambah">Tambah Bayar</button></h4></td>
+                                            <td width="41%"><h4 class="title" align="right"></h4></td>
+                                            <td><h4 class="title" align="right"></h4></td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                    </div>  
+                                </div>
+                            </div>
+                            <button type="button" id="simpan" class="btn btn-success btn-lg btn-block">Simpan</button>
+                              <a class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal" style="display: none" id="out"></a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+        
+    </div>
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">PP 2017001</h4>
+                </div>
+                <div id="printableArea">
+                    <div class="modal-body">
+                        <div class="card">
+                                <div class="card-header" data-background-color="purple">
+                                    <h2 class="title">Tagihan</h2>
+                                    <h4 class="title" align="right">WAFA</h4>
+                                    <p class="category" align="right">Jl. Pagesangan No.2 Sby<br>031-8432156</p>
+                                    <table border="0" width="100%">
+                                        <tr>
+                                            <td width="10%">Kepada</td>
+                                            <td>:</td>
+                                            <td>Irvan Syachrudin</td>
+                                            <td width="15%" style="border-right: 1px solid black">P 2017001</td>
+                                            <td width="15%" align="center">Total : 605.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top">Alamat</td>
+                                            <td valign="top">:</td>
+                                            <td>Jl Semut no.67<br> Surabaya</td>
+                                            <td valign="top">Tanggal</td>
+                                            <td align="center" valign="top">05 Januari 2018</td>
+                                        </tr>
+                                    </table><br>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Nama Barang</th>
+                                            <th>Jumlah</th>
+                                            <th>Harga Satuan</th>
+                                            <th>Total</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="odd gradeX">
+                                            <td>1</td>
+                                            <td>Buku Tilawah Wafa 1</td>
+                                            <td contenteditable >20</td>
+                                            <td class="center">9.000</td>
+                                            <td class="center">180.000</td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                            <td>2</td>
+                                            <td>Buku Peraga Tilawah Wafa 1</td>
+                                            <td>10</td>
+                                            <td class="center">17.000</td>
+                                            <td class="center">170.000</td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                            <td>2</td>
+                                            <td>Buku Menulis Wafa 1</td>
+                                            <td contenteditable >15</td>
+                                            <td class="center">17.000</td>
+                                            <td class="center">255.000</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="card-header" data-background-color="purple">
+                                        <table border="0" width="100%">
+                                            <tr>
+                                            <td width="15%" align="center" colspan="2"><h4 class="title" align="right" >Total : </h4></td>
+                                            <td><h4 class="title" align="right">605.000</h4></td>
+                                            </tr>
+                                            <tr>
+                                            <td width="15%" align="center" colspan="2"><h4 class="title" align="right" >Terbayar : </h4></td>
+                                            <td><h4 class="title" align="right">40.000</h4></td>
+                                            </tr>
+                                            <tr>
+                                            <td width="15%" align="center" colspan="2"><h4 class="title" align="right" >Sisa Bayar : </h4></td>
+                                            <td><h4 class="title" align="right">565.000</h4></td>
+                                            </tr>           
+                                            <tr>
+                                            <td width="41%"></td>
+                                            <td width="41%"></td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                    </div>  
+
+                                    </div>  
+                                </div>
+                            </div>
+                        </div><br>
+                        <br>
+                    <div class="modal-footer">
+
+                        <button class="btn btn-primary" onclick="$.fn.printDiv('printableArea');" ><i class="glyphicon glyphicon-print " ></i> Print</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">PP 2017001</h4>
+                </div>
+                <div id="printableArea">
+                    <div class="modal-body">
+                        <div class="card">
+                                <div id="printableArea">
+                                <div class="card-header" data-background-color="purple">
+                                    <h2 class="title" style="text-align:center;"><u>KWITANSI</u></h2>
+                                    <h4 class="title" align="right">WAFA</h4>
+                                    <p class="category" align="right">Jl. Pagesangan No.2 Sby<br>031-8432156</p>
+                                    
+                                </div>
+                                <div class="card-content table-responsive">
+                            <table width="100%" class="table table-striped table-bordered table-hover" ">
+                                
+                                    <tr>
+                                        <td width="20%">Sudah Terima Dari</td>
+                                        <td width="2%">:</td>
+                                        <td>Irvan Syachrudin</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">Banyaknya Uang</td>
+                                        <td width="2%">:</td>
+                                        <td>Rp 605.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">Untuk Pembayaran</td>
+                                        <td width="2%">:</td>
+                                        <td><b>Lunas</b></td>
+                                    </tr>
+                            </table>
+                            <div class="card-header" data-background-color="purple">
+                                    <table border="0" width="100%">
+                                        <tr>
+                                        <td width="41%"><h4 class="title">  </h4></td>
+                                        <td><h4 class="title" align="right"> </h4></td>
+                                        <td width="41%"><h4 class="title" align="right" >Surabaya, 16 Januari 2018</h4></td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h4 align="right">Manager Marketing</h4>
+                                </div>  
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                        </div><br>
+                    <div class="modal-footer">
+
+                        <button class="btn btn-primary" onclick="$.fn.printDiv('printableArea');" ><i class="glyphicon glyphicon-print " ></i> Print</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal3" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">PP 2017001</h4>
+                </div>
+                <div id="printableArea">
+                    <div class="modal-body">
+                        <div class="card">
+                                <div id="printableArea">
+                                <div class="card-header" data-background-color="purple">
+                                    <h2 class="title" ><u>SURAT JALAN</u></h2>
+                                    <h4 class="title" align="right">WAFA</h4>
+                                    <p class="category" align="right">Jl. Pagesangan No.2 Sby<br>031-8432156</p>
+                                    <hr>
+                                </div>
+                                <b>Kepada Yth,</b>
+                                <table width="100%" border="0">
+                                <tr>
+                                <td width="10%"><b>Nama</b></td>
+                                <td>:</td>
+                                <td>Irvan</td>
+                                <td width="20%" align="center"><b>Tanggal</b></td>
+                                <td width="13%">11 Januari 2018</td>
+                                </tr>
+                                
+                                <tr>
+                                <td><b>Telp</b></td>
+                                <td>:</td>
+                                <td>0312734843</td>
+                                </tr>
+                                <tr>
+                                <td><b>Alamat</b></td>
+                                <td>:</td>
+                                <td>Jl. Kenjeran no 20 Surabaya</td>
+                                </tr>
+                                </table><br><br>
+                                <div class="card-content table-responsive">
+                            <table width="100%" class="table table-striped table-bordered table-hover" ">
+                                
+                                    <tr>
+                                        <td>Nama Barang</td>
+                                        <td>Jumlah</td>
+                                        <td>Keterangan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tahsin Wafa 1</td>
+                                        <td>14</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tahsin Wafa 2</td>
+                                        <td>24</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tajwid Wafa 2</td>
+                                        <td>41</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td >Catatan</td>
+                                        <td width="50%" colspan="2" >PERHATIAN :<br>1. Surat jalan ini merupakan bukti resmi penerimaan barang
+                                        <br>2. Surat jalan ini jangan sampai hilang.<br>
+                                        3. Surat jalan ini harap disimpan sampai barang terkirim.</td>
+                                    </tr>
+                            </table>
+                            <div class="card-header" data-background-color="purple">
+                                    <p><i>BARANG DITERIMA DENGAN KEADAAN BAIK dan CUKUP BAIK</i></p>
+                                    <table border="0" width="100%">
+                                        <tr>
+                                        <td width="33.3%" align="center"> <h4 class="title">Penerima    </h4></td>
+                                        <td width="33.3%" align="center"><h4 class="title">Bagian Pengiriman </h4></td>
+                                        <td width="33.3%" align="center"><h4 class="title">Petugas Gudang</h4></td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <table border="0" width="100%">
+                                        <tr>
+                                        <td width="33.3%" align="center"><h4 class="title">___________________________  </h4></td>
+                                        <td width="33.3%" align="center"><h4 class="title">___________________________ </h4></td>
+                                        <td width="33.3%" align="center"><h4 class="title">___________________________</h4></td>
+                                        </tr>
+                                    </table>
+                                </div>  
+                            </div>
+                            </div>
+                            <br>
+                                    <button class="btn btn-primary" onclick="printDiv('printableArea')" >Print</button>
+                                    <button class="btn btn-primary" data-dismiss="modal" >Simpan</button>
+                                    <br>
+                                
+                            </div>
+                            </div>
+                        </div><br>
+                    <div class="modal-footer">
+
+                        <button class="btn btn-primary" onclick="$.fn.printDiv('printableArea');" ><i class="glyphicon glyphicon-print " ></i> Print</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script src="../vendor/datatables/js/dataTables.buttons.min.js"></script>
+    <script src="../vendor/datatables/js/dataTables.select.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+        var i = 1;
+        $(document).ready(function() {
+            $("#bayar").click(function(){
+                i++;
+                myTable.row.add( ['R 2017 000'+i,'<div class="form-group"><input type="date"class="form-control"></div>','<div class="form-group"><input class="form-control"></div>', '<div class="form-group"><input class="form-control"></div>','<div class="form-group"><input class="form-control"></div>']).draw();
+            });
+            $.fn.printDiv = function(divName){ 
+                var printContents = document.getElementById(divName).innerHTML;
+                var winPrint = window.open('', '', 'left=0,top=0,width=1000,height=auto,toolbar=0,scrollbars=0,status=0');
+                winPrint.document.write(printContents+'<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet"><link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet"><link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet"><link href="../dist/css/sb-admin-2.css" rel="stylesheet"><link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">');
+                winPrint.document.close();
+                winPrint.focus();
+                winPrint.print();
+                winPrint.close(); 
+            }
+            $.fn.hapus = function(i){ 
+            $('#data'+i).remove();
+            }
+            $('#tambah').click(function(){
+                i++;
+                var monthNames = ["Januari", "Februari", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+                var d = new Date();
+
+                var month = d.getMonth()+1;
+                var day = d.getDate(); 
+                var output = d.getFullYear() + '/' +(month<10 ? '0' : '') + month + '/' +(day<10 ? '0' : '') + day;
+                var html = '<tr id="data'+i+'">';
+                html += '<td>R 2017 000'+i+'</td>';
+                html += '<td contenteditable>'+(day<10 ? '0' : '') + d.getDate() + " "+monthNames[d.getMonth()]+ " "+d.getFullYear()+'</td>';
+                html += '<td contenteditable></td>';
+                html += '<td contenteditable></td>';
+                html += '<td contenteditable></td>';
+                html += '<td><button type="button" class="btn btn-danger" onclick="$.fn.hapus('+i+');"><i class="fa fa-trash-o" ></i> Hapus</button></td>';
+                html += '</tr>';
+                $('#bayar').prepend(html);
+              });
+            $('#simpan').click(function(){
+                window.location = "daftar_pembayaran.html";
+              });
+        } );
+            
+    </script>
+
+</body>
+
+</html>

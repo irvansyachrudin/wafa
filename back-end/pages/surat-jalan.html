@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>WAFA Admin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">WAFA</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-th-list fa-fw"></i> Data Master <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="data-barang.html"><i class="fa fa-table fa-fw"></i> Data Barang</a>
+                                </li>
+                                <li>
+									<a href="data-supplier.html"><i class="fa fa-table fa-fw"></i> Data Supplier</a>
+                                </li>
+								<li>
+									<a href="data-customer.html"><i class="fa fa-table fa-fw"></i> Data Customer</a>
+                                </li>
+								<li>
+									<a href="data-ekspedisi.html"><i class="fa fa-table fa-fw"></i> Data Ekspedisi</a>
+								</li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Pembelian (Purchase)<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="tables.html"><i class="fa fa-table fa-fw"></i> Stok</a>
+                                </li>
+                                <li>
+									<a href="purchase-order.html"><i class="fa fa-shopping-cart fa-fw"></i> Purchase Order</a>
+                                </li>
+								<li>
+									<a href="penerimaan-barang.html"><i class="fa fa-check-circle-o fa-fw"></i> Penerimaan Barang</a>
+                                </li>
+								<li>
+									<a href="pembayaran-po.html"><i class="fa fa-dollar fa-fw"></i> Pembayaran Purchase Order</a>
+								</li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Penjualan (Sales)<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="daftar_pembayaran.html"><i class="fa fa-table fa-fw"></i> Daftar Pembayaran</a>
+                                </li>
+                                <li>
+                                    <a href="penjualan.html"><i class="fa fa-shopping-cart fa-fw"></i> Permintaan Penjualan</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Laporan <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="laporan-stok.html"><i class="fa fa-table fa-fw"></i> Laporan Stok</a>
+                                </li>
+                                <li>
+									<a href="laporan-penjualan.html"><i class="fa fa-shopping-cart fa-fw"></i> Laporan Penjualan</a>
+                                </li>
+								<li>
+									<a href="laporan-pembelian.html"><i class="fa fa-shopping-cart fa-fw"></i> Laporan Pembelian</a>
+								</li>
+								<li>
+									<a href="laporan_perbarang.html"><i class="fa fa-briefcase fa-fw"></i> Laporan Per Barang</a>
+								</li>
+								<li>
+									<a href="laporan_customer.html"><i class="fa fa-users   fa-fw"></i> Laporan Customer</a>
+								</li>
+								<li>
+									<a href="laporan-hutang.html"><i class="fa fa-dollar fa-fw"></i> Laporan Piutang Penjualan</a>
+								</li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Surat Jalan</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Data Surat Jalan
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                        <div class="card">
+                                <div id="printableArea">
+                                <div class="card-header" data-background-color="purple">
+                                    <h2 class="title">Surat Jalan</h2>
+                                    <h4 class="title" align="right">WAFA</h4>
+                                    <p class="category" align="right">Jl. Pagesangan No.2 Sby<br>031-8432156</p>
+                                    <table border="0" width="100%">
+                                        <tr>
+                                        <td width="10%">Kepada</td>
+                                        <td>:</td>
+                                        <td>KMT</td>
+                                        <td width="15%" style="border-right: 1px solid black">PO-20170001</td>
+                                        <td width="15%" align="center">Total : 110.000</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                        <td valign="top">Alamat</td>
+                                        <td valign="top">:</td>
+                                        <td>Jl Pemuda no.128<br> Surabaya</td>
+                                        <td valign="top">Tanggal</td>
+                                        <td align="center" valign="top">24 Des 2017</td>
+                                        </tr>
+                                    </table><br>
+                                </div>
+                                <div class="card-content table-responsive">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example-dua">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Nama Barang</th>
+                                        <th>Jumlah</th>
+                                        <th>Harga Satuan</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>1</td>
+                                        <td>Tahsin</td>
+                                        <td>10</td>
+                                        <td class="center">3.000</td>
+                                        <td class="center">30.000</td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td>2</td>
+                                        <td>Tajwid</td>
+                                        <td>20</td>
+                                        <td class="center">2.000</td>
+                                        <td class="center">40.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="card-header" data-background-color="purple">
+                                    <table border="0" width="100%">
+                                        <tr>
+                                        <td width="82%"><h4 class="title" align="right">Sub Total : </h4></td>
+                                        <td><h4 class="title" align="right">100.000</h4></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                        <td><h4 class="title" align="right">Ongkos Kirim : </h4></td>
+                                        <td><h4 class="title" align="right"> 10.000</h4></td>
+                                        </tr>
+                                        <tr>
+                                        <td width="15%" align="center"><h4 class="title" align="right">Total : </h4></td>
+                                        <td><h4 class="title" align="right">110.000</h4></td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                </div>  
+                            </div>
+                            </div>
+                            <br>
+                                    <button class="btn btn-primary" onclick="printDiv('printableArea')" >Print</button>
+                                    <button class="btn btn-primary" data-dismiss="modal">Simpan</button>
+                                    <br>
+                            </div>
+                            </div>
+                                
+                              <a class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal" style="display: none" id="out"></a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+		
+    </div>
+    <!-- /#Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+								<div class="card">
+								<div id="printableArea">
+                                <div class="card-header" data-background-color="purple">
+                                    <h2 class="title">Purchase ORDER</h2>
+                                    <h4 class="title" align="right">WAFA</h4>
+                                    <p class="category" align="right">Jl. Pagesangan No.2 Sby<br>031-8432156</p>
+                                    <table border="0" width="100%">
+										<tr>
+										<td width="10%">Kepada</td>
+										<td>:</td>
+										<td>KMT</td>
+										<td width="15%" style="border-right: 1px solid black">PO-20170001</td>
+										<td width="15%" align="center">Total : 110.000</td>
+										</tr>
+										
+										<tr>
+										<td valign="top">Alamat</td>
+										<td valign="top">:</td>
+										<td>Jl Pemuda no.128<br> Surabaya</td>
+										<td valign="top">Tanggal</td>
+										<td align="center" valign="top">24 Des 2017</td>
+										</tr>
+									</table><br>
+                                </div>
+                                <div class="card-content table-responsive">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example-dua">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Nama Barang</th>
+                                        <th>Jumlah</th>
+                                        <th>Harga Satuan</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>1</td>
+                                        <td>Tahsin</td>
+                                        <td>10</td>
+                                        <td class="center">3.000</td>
+                                        <td class="center">30.000</td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td>2</td>
+                                        <td>Tajwid</td>
+                                        <td>20</td>
+                                        <td class="center">2.000</td>
+                                        <td class="center">40.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="card-header" data-background-color="purple">
+                                    <table border="0" width="100%">
+                                        <tr>
+                                        <td width="82%"><h4 class="title" align="right">Sub Total : </h4></td>
+                                        <td><h4 class="title" align="right">100.000</h4></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                        <td><h4 class="title" align="right">Ongkos Kirim : </h4></td>
+                                        <td><h4 class="title" align="right"> 10.000</h4></td>
+                                        </tr>
+                                        <tr>
+                                        <td width="15%" align="center"><h4 class="title" align="right">Total : </h4></td>
+                                        <td><h4 class="title" align="right">110.000</h4></td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                </div>  
+							</div>
+							</div>
+                            <br>
+									<button class="btn btn-primary" onclick="printDiv('printableArea')" >Print</button>
+                                    <button class="btn btn-primary" data-dismiss="modal">Simpan</button>
+                                    <br>
+                            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- /#Modal -->
+	<div class="modal fade" id="myModaldua" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+								<div class="card">
+                                <div class="card-header" data-background-color="purple">
+                                    <h4 class="title">Simple Table</h4>
+                                    <p class="category">Here is a subtitle for this table</p>
+                                </div>
+                                <div class="card-content table-responsive">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example-tiga">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Nama Barang</th>
+                                        <th>Suplier</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>1</td>
+                                        <td>Tahsin Wafa 1</td>
+                                        <td class="center">KMT</td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td>2</td>
+                                        <td>Tahsin Wafa 2</td>
+                                        <td class="center">KMT</td>
+                                    </tr>
+                                    <tr class="odd gradeA">
+                                        <td>3</td>
+                                        <td>Tajwid</td>
+                                        <td class="center">KMT</td>
+                                    </tr>
+                                    
+                                   
+                                </tbody>
+                            </table>
+									<button class="btn btn-primary">Simpan</button>
+                                </div>
+                            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.2.4/js/dataTables.select.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+        var i = 0;
+        var editor;
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+        $('#dataTables-example-dua').DataTable({
+            responsive: true
+        });
+        $('#dataTables-example-tiga').DataTable({
+            responsive: true
+        });
+
+        var myTable = $('#dataTables-example').DataTable();
+     
+        $('#dataTables-example').on( 'click', 'tbody tr', function () {
+            $('#out').click();
+            //alert( '#satu'+temp+data[1] );
+        } );
+    } );
+    function add(){
+        i++;
+        var table = $('#dataTables-example-dua').DataTable();
+        table.row.add( [ i, '<div class="form-group input-group"><input type="text" class="form-control"><span class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span></div>', '<div class="form-group"><input class="form-control" placeholder="Jumlah"></div>', '', '' ]).draw();
+            }
+	function printDiv(divName) {
+         var printContents = document.getElementById(divName).innerHTML;
+         var originalContents = document.body.innerHTML;
+
+         document.body.innerHTML = printContents;
+
+         window.print();
+
+         document.body.innerHTML = originalContents;
+    }
+			
+    </script>
+
+</body>
+
+</html>
